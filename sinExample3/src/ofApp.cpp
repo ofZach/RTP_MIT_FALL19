@@ -21,7 +21,7 @@ void ofApp::draw(){
         
         //float x = ofMap(sin(time + i*0.01*mouseX), -1, 1, 200,600);
         
-        float x = ofMap(sin(time * (i*0.01)), -1, 1, 200,600);
+        float x = ofMap(sin(time * (i*0.1)), -1, 1, 200,600);
         ofDrawCircle(x,i, 2);
     }
     

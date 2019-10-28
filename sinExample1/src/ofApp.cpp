@@ -15,14 +15,19 @@ void ofApp::draw(){
 
     //sin()
     //ofGetElaspedTimef();
-    //cout << sin(ofGetElapsedTimef()) << endl;
+    // + - * / <<
+    // cout = console output
+    // endl = new line "\n"
+    //cout << "elapsed time " << ofGetElapsedTimef() << endl;
+    
+     //cout << sin(ofGetElapsedTimef()) << endl;
     
     // (processing millis()/1000.0)
     
-    float time = ofGetElapsedTimef();
-    float radius = ofMap(sin(time), -1, 1, 0, 100);
-    ofDrawCircle(400,400,radius);
-    
+      float time = ofGetElapsedTimef();
+      float radius = ofMap(sin(time), -1, 1, 0, 100);
+      ofDrawCircle(400,400,radius);
+//
     
     
 }

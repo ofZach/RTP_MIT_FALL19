@@ -3,6 +3,12 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+    panel.setup();
+    group.add( test.set("test", 0, 0, 100));
+    group.add( test2.set("test2", 20, 1, 200));
+    panel.add(group);
+    
+    
 }
 
 //--------------------------------------------------------------
@@ -12,16 +18,13 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+
+    ofSetCircleResolution(test2);
+    ofDrawCircle(400,400, test);
     
-    ofBackground(0);
+    panel.draw();
     
-    float time = ofGetElapsedTimef();
-    float y = ofMap(sin(time*2), -1, 1, 200,600);
-    ofDrawCircle(400, y, 50);
-    y = ofMap(sin(time*2 + 1), -1, 1, 200,600);
-    ofDrawCircle(200, y, 50);
-    y = ofMap(sin(time*2 + 2), -1, 1, 200,600);
-    ofDrawCircle(600, y, 50);
+    
     
 }
 
